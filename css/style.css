@@ -275,10 +275,6 @@ body {
   color: var(--color-active);
 }
 
-.form__select {
-  margin-bottom: 36px;
-}
-
 /* select */
 .choices {
   margin-bottom: 30px;
