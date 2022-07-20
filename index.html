@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task launcher</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <form iclass="form" action="https://jsonplaceholder.typicode.com/posts" method="post">
+      <h2 class="form__title">Create New task</h2>
+      <div class="form__input-box">
+        <input aria-label="Enter yout title" class="form__input"
+          type="text"
+          placeholder="Title">
+      </div>
+      <div class="select">
+        <select name="Select Assignee">
+          <option value="" disabled selected>Select Assignee</option>
+          <option>Assignee 1</option>
+          <option>Assignee 2</option>
+          <option>Assignee 3</option>
+          <option>Assignee 4</option>
+        </select>
+      </div>
+      <div class="form-item form-item-date">
+        <input class="form-date" type="date" name="date">
+      </div>
+      <div class="form-item form-item-date">
+        <input class="form-date" type="date" name="date">
+      </div>
+      <button class="form__btn form__btn_cancel btn-reset" type="cancel">Cancel</button>
+      <button class="form__btn form__btn_save btn-reset" type="submit">Save</button>
+    </form>
+  </div>
+  <script src="/index.js"></script>
+</body>
+
+</html>
