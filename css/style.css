@@ -48,8 +48,11 @@ body {
 }
 
 :root {
-  --color-background: #adadc9;
+  --color-background: #DBDCEE;
   --color-text: #757575;
+  --color-white: #fff;
+  --color-promo: #5F65F6;
+  --color-active: #6153CC;
 }
 
 /* glob */
@@ -62,7 +65,7 @@ body {
 .container {
   max-width: 1920px;
   padding: 0 75px;
-  padding-top: 50px;
+  padding-top: 100px;
   margin: 0 auto;
 }
 
@@ -71,5 +74,218 @@ body {
   border: none;
   background-color: transparent;
   cursor: pointer;
+}
+
+.list-reset {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* form */
+.form {
+  position: relative;
+  width: 475px;
+  min-height: 597px;
+  margin: 0 auto;
+  padding-top: 32.7px;
+  padding-bottom: 24px;
+  background-color: var(--color-white);
+  box-shadow: 0px 11.6189px 124.28px rgba(37, 72, 153, 0.17);
+  border-radius: 23.2px;
+}
+
+.form::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 474px;
+  min-height: 597px;
+  background-color: transparent;
+  border: 2px solid var(--color-white);
+  border-radius: 23.2px;
+  transform: rotate(2deg);
+}
+
+.form__body {
+  padding-left: 23px;
+  padding-right: 23px;
+}
+
+.form__title {
+  margin: 0;
+  margin-bottom: 36px;
+  color: #151515;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 31px;
+}
+
+.form__input-box {
+  margin-bottom: 36px;
+}
+
+.form__input {
+  padding-top: 10.56px;
+  padding-bottom: 12px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #757575;
+  background-color: transparent;
+  color: var(--color-text);
+  transition: border-bottom .3s ease;
+}
+
+.form__input:hover {
+  border-bottom: 1px solid var(--color-promo);
+}
+
+.form__input:focus-visible {
+  outline: none;
+  border-bottom: 1px solid var(--color-promo);
+}
+
+.form__input:active {
+  outline: none;
+  border-bottom: 1px solid var(--color-active);
+}
+
+.search__input::placeholder {
+  padding-left: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.form__description {
+  margin-bottom: 36px;
+}
+
+.form__label {
+  align-items: center;
+  margin-bottom: 36px;
+}
+
+.form__label-item {
+  height: 36px;
+}
+
+.form__label-icon circle {
+  transition: stroke-opacity .3s ease;
+}
+
+.form__label-icon circle {
+  stroke-opacity: 0;
+}
+
+.form__label-item:hover .form__label-icon circle {
+  stroke-opacity: 1;
+}
+
+.form__label-icon path {
+  stroke: transparent;
+}
+
+.form__label-icon:active path {
+  stroke: var(--color-white);
+}
+
+.form__label-text {
+  margin-right: 36px;
+}
+
+.form__label-item:not(:last-child) {
+  margin-right: 16px;
+}
+
+.form__description {
+  color: var(--color-text);
+  transition: color .3s ease;
+}
+
+.form__description:focus-visible{
+  outline: none;
+  color: var(--color-promo);
+}
+
+.form__description:hover {
+  color: var(--color-promo);
+}
+
+.form__description:active {
+  color: var(--color-active);
+}
+
+.form__select {
+  margin-bottom: 36px;
+}
+
+.form__date {
+  margin-bottom: 33px;
+}
+
+.form__footer {
+  position: relative;
+  justify-content: center;
+  padding-top: 25px;
+}
+
+.form__footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-top: 1px solid var(--color-background);
+}
+
+.form__btn {
+  width: 180px;
+  padding: 11px 59px 12px;
+  border-radius: 10.5px;
+  font-weight: 600;
+  transition: background-color .3s ease-in-out;
+}
+
+.form__btn_cancel {
+  margin-right: 20px;
+  background-color: #F5F7FB;
+  color: rgba(21, 25, 32, 0.5);
+}
+
+.form__btn_cancel:focus-visible {
+  outline-offset: 2px;
+  outline: 1px solid #F5F7FB;
+}
+
+.form__btn_cancel:hover {
+  background-color: var(--color-background);
+}
+
+.form__btn_cancel:active {
+  outline-offset: 2px;
+  outline: 1px solid var(--color-background);
+  background-color: var(--color-background);
+}
+
+.form__btn_save {
+  background-color: var(--color-promo);
+  color: var(--color-white);
+}
+
+.form__btn_save:focus-visible {
+  outline-offset: 2px;
+  outline: 1px solid var(--color-promo);
+}
+
+.form__btn_save:hover {
+  background-color: var(--color-active);
+}
+
+.form__btn_save:active {
+  outline-offset: 2px;
+  outline: 1px solid var(--color-active);
+  background-color: var(--color-active);
 }
 

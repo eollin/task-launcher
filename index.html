@@ -11,30 +11,73 @@
 
 <body>
   <div class="container">
-    <form iclass="form" action="https://jsonplaceholder.typicode.com/posts" method="post">
-      <h2 class="form__title">Create New task</h2>
-      <div class="form__input-box">
-        <input aria-label="Enter yout title" class="form__input"
-          type="text"
-          placeholder="Title">
+    <form class="form" action="https://jsonplaceholder.typicode.com/posts" method="post">
+      <div class="form__body">
+        <h2 class="form__title">Create New task</h2>
+        <div class="form__input-box">
+          <input aria-label="Enter yout title" class="form__input"
+            type="text"
+            placeholder="Title">
+        </div>
+        <button class="form__description btn-reset">Click to add Description</button>
+        <div class="form__label flex">
+          <p class="form__label-text">Label color</p>
+          <ul class="form__label-list list-reset flex">
+            <li class="form__label-item">
+              <svg class="form__label-icon" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle opacity="0.4" cx="18.9554" cy="19.3513" r="18" stroke="#878C93"/>
+                <circle cx="18.9554" cy="19.3513" r="14" fill="#878C93"/>
+                <path d="M24.2888 15.3513L16.9555 22.6847L13.6221 19.3513" stroke="white" stroke-width="1.33333" stroke-linecap="round"/>
+              </svg>                   
+            </li>
+            <li class="form__label-item">
+              <svg class="form__label-icon" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle opacity="0.4" cx="18.9554" cy="19.3513" r="18" stroke="#6153CC"/>
+                <circle cx="18.9554" cy="19.3513" r="14" fill="#6153CC"/>
+                <path d="M24.2888 15.3513L16.9555 22.6847L13.6221 19.3513" stroke="white" stroke-width="1.33333" stroke-linecap="round"/>
+              </svg>                 
+            </li>
+            <li class="form__label-item">
+              <svg class="form__label-icon" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle opacity="0.4" cx="18.9554" cy="19.3513" r="18" stroke="#FF715B"/>
+                <circle cx="18.9554" cy="19.3513" r="14" fill="#FF715B"/>
+                <path d="M24.2888 15.3513L16.9555 22.6847L13.6221 19.3513" stroke="white" stroke-width="1.33333" stroke-linecap="round"/>
+              </svg>                
+            </li>
+            <li class="form__label-item">
+              <svg class="form__label-icon" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle opacity="0.4" cx="18.9554" cy="19.3513" r="18" stroke="#151515"/>
+                <circle cx="18.9554" cy="19.3513" r="14" fill="#151515"/>
+                <path d="M24.2888 15.3513L16.9555 22.6847L13.6221 19.3513" stroke="white" stroke-width="1.33333" stroke-linecap="round"/>
+              </svg>               
+            </li>
+            <li class="form__label-item">
+              <svg class="form__label-icon" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle opacity="0.4" cx="18.9554" cy="19.3513" r="18" stroke="#FFB627"/>
+                <circle cx="18.9554" cy="19.3513" r="14" fill="#FFB627"/>
+                <path d="M24.2888 15.3513L16.9555 22.6847L13.6221 19.3513" stroke="white" stroke-width="1.33333" stroke-linecap="round"/>
+              </svg>                 
+            </li>
+          </ul>
+        </div>
+        <div class="form__select">
+          <select name="Select Assignee">
+            <option value="" disabled selected>Select Assignee</option>
+            <option>Assignee 1</option>
+            <option>Assignee 2</option>
+            <option>Assignee 3</option>
+            <option>Assignee 4</option>
+          </select>
+        </div>
+        <div class="form__date flex">
+          <input class="form__date-item" type="date" name="date">
+          <input class="form__date-item" type="date" name="date">
+        </div>
       </div>
-      <div class="select">
-        <select name="Select Assignee">
-          <option value="" disabled selected>Select Assignee</option>
-          <option>Assignee 1</option>
-          <option>Assignee 2</option>
-          <option>Assignee 3</option>
-          <option>Assignee 4</option>
-        </select>
+      <div class="form__footer flex">
+        <button class="form__btn form__btn_cancel btn-reset" type="cancel">Cancel</button>
+        <button class="form__btn form__btn_save btn-reset" type="submit">Save</button>
       </div>
-      <div class="form-item form-item-date">
-        <input class="form-date" type="date" name="date">
-      </div>
-      <div class="form-item form-item-date">
-        <input class="form-date" type="date" name="date">
-      </div>
-      <button class="form__btn form__btn_cancel btn-reset" type="cancel">Cancel</button>
-      <button class="form__btn form__btn_save btn-reset" type="submit">Save</button>
     </form>
   </div>
   <script src="/index.js"></script>
