@@ -63,9 +63,11 @@ body {
 }
 
 .container {
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
   max-width: 1920px;
-  padding: 0 75px;
-  padding-top: 100px;
+  padding: 0 100px;
   margin: 0 auto;
 }
 
@@ -85,13 +87,15 @@ body {
 /* form */
 .form {
   position: relative;
-  width: 475px;
+  max-width: 475px;
+  width: 100%;
   min-height: 597px;
   margin: 0 auto;
-  padding-top: 32.7px;
+  padding-top: 34px;
   padding-bottom: 24px;
   background-color: var(--color-white);
-  box-shadow: 0px 11.6189px 124.28px rgba(37, 72, 153, 0.17);
+  -webkit-box-shadow: 0px 11.6189px 124.28px rgba(37, 72, 153, 0.17);
+          box-shadow: 0px 11.6189px 124.28px rgba(37, 72, 153, 0.17);
   border-radius: 23.2px;
 }
 
@@ -101,12 +105,16 @@ body {
   z-index: -1;
   top: 0;
   left: 0;
-  width: 474px;
+  bottom: 0;
+  max-width: 475px;
+  width: 100%;
   min-height: 597px;
   background-color: transparent;
   border: 2px solid var(--color-white);
   border-radius: 23.2px;
-  transform: rotate(2deg);
+  -webkit-transform: rotate(2deg);
+      -ms-transform: rotate(2deg);
+          transform: rotate(2deg);
 }
 
 .form__body {
@@ -114,9 +122,14 @@ body {
   padding-right: 23px;
 }
 
+.form__body-top {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
 .form__title {
   margin: 0;
-  margin-bottom: 36px;
+  margin-bottom: 42px;
   color: #151515;
   font-size: 25px;
   font-weight: 700;
@@ -124,18 +137,29 @@ body {
 }
 
 .form__input-box {
-  margin-bottom: 36px;
+  position: relative;
+  margin-bottom: 42px;
 }
 
 .form__input {
-  padding-top: 10.56px;
-  padding-bottom: 12px;
+  padding-top: 12px;
+  padding-bottom: 16px;
   width: 100%;
   border: none;
   border-bottom: 1px solid #757575;
   background-color: transparent;
   color: var(--color-text);
+  -webkit-transition: border-bottom .3s ease;
+  -o-transition: border-bottom .3s ease;
   transition: border-bottom .3s ease;
+}
+
+.count {
+  position: absolute;
+  top: 25%;
+  right: 0;
+  content: "00/100";
+  color: var(--color-text);
 }
 
 .form__input:hover {
@@ -152,14 +176,38 @@ body {
   border-bottom: 1px solid var(--color-active);
 }
 
-.search__input::placeholder {
+.form__input::-webkit-input-placeholder {
+  padding-left: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.form__input::-moz-placeholder {
+  padding-left: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.form__input:-ms-input-placeholder {
+  padding-left: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.form__input::-ms-input-placeholder {
+  padding-left: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.form__input::placeholder {
   padding-left: 0;
   font-size: 18px;
   font-weight: 500;
 }
 
 .form__description {
-  margin-bottom: 36px;
+  margin-bottom: 42px;
 }
 
 .form__label-text {
@@ -167,8 +215,10 @@ body {
 }
 
 .form__label {
-  align-items: center;
-  margin-bottom: 36px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 34px;
 }
 
 .form__label-item {
@@ -176,6 +226,8 @@ body {
 }
 
 .form__label-icon circle {
+  -webkit-transition: stroke-opacity .3s ease;
+  -o-transition: stroke-opacity .3s ease;
   transition: stroke-opacity .3s ease;
 }
 
@@ -200,11 +252,13 @@ body {
 }
 
 .form__label-item:not(:last-child) {
-  margin-right: 16px;
+  margin-right: 6px;
 }
 
 .form__description {
   color: var(--color-text);
+  -webkit-transition: color .3s ease;
+  -o-transition: color .3s ease;
   transition: color .3s ease;
 }
 
@@ -226,11 +280,15 @@ body {
 }
 
 /* select */
+.choices {
+  margin-bottom: 30px;
+}
+
 .choices__inner {
   position: relative;
   z-index: 2;
   height: 50px;
-  padding: 15px 21px 14px 14px;
+  padding: 14px 21px 14px 14px;
   font-weight: 500;
   font-size: 16px;
   line-height: 20px;
@@ -267,9 +325,9 @@ body {
   top: 45%;
   border: 2px solid #151515;
   border-width: 0 0 2px 2px;
-  -webkit-transform: translateX(-13px) rotate(-45deg);
-      -ms-transform: translateX(-13px) rotate(-45deg);
-          transform: translateX(-13px) rotate(-45deg);
+  -webkit-transform: translateX(-10px) rotate(-45deg);
+      -ms-transform: translateX(-10px) rotate(-45deg);
+          transform: translateX(-10px) rotate(-45deg);
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
@@ -287,11 +345,12 @@ body {
 }
 
 .choices__placeholder {
-  padding-left: 35px;
+  padding-left: 30px;
   opacity: 1;
   background-repeat: no-repeat;
   background-position: left center;
   background-position-y: -3px;
+  background-position-x: -4px;
   background-image: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20.2725 21.8782V19.8782C20.2725 18.8173 19.851 17.7999 19.1009 17.0497C18.3507 16.2996 17.3333 15.8782 16.2725 15.8782H8.27246C7.21159 15.8782 6.19418 16.2996 5.44403 17.0497C4.69389 17.7999 4.27246 18.8173 4.27246 19.8782V21.8782' stroke='%23151515' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.2725 11.8782C14.4816 11.8782 16.2725 10.0873 16.2725 7.87817C16.2725 5.66903 14.4816 3.87817 12.2725 3.87817C10.0633 3.87817 8.27246 5.66903 8.27246 7.87817C8.27246 10.0873 10.0633 11.8782 12.2725 11.8782Z' stroke='%23151515' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
 }
 
@@ -317,6 +376,8 @@ body {
   padding-left: 20px;
   font-size: 16px;
   background-color: var(--color-white);
+  -webkit-transition: color .3s ease;
+  -o-transition: color .3s ease;
   transition: color .3s ease;
 }
 
@@ -343,8 +404,10 @@ body {
 
 /* form__date */
 .form__date {
-  justify-content: space-between;
-  margin-bottom: 36px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 32px;
 }
 
 .form__date-item {
@@ -379,7 +442,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
 /* .form__footer */
 .form__footer {
   position: relative;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-top: 25px;
 }
 
@@ -393,10 +458,14 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 .form__btn {
-  width: 180px;
-  padding: 11px 59px 12px;
+  max-width: 180px;
+  width: 100%;
+  height: 55px;
+  padding: 11px 29px 12px;
   border-radius: 10.5px;
   font-weight: 600;
+  -webkit-transition: background-color .3s ease-in-out, color .3s ease-in-out;
+  -o-transition: background-color .3s ease-in-out, color .3s ease-in-out;
   transition: background-color .3s ease-in-out, color .3s ease-in-out;
 }
 
@@ -441,4 +510,3 @@ input[type=date]::-webkit-calendar-picker-indicator {
   outline: 1px solid var(--color-active);
   background-color: var(--color-active);
 }
-
